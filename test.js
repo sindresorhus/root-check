@@ -1,19 +1,23 @@
-'use strict';
-var test = require('ava');
-var rootCheck = require('./');
+import test from 'ava';
+import fn from './';
 
-test(function (t) {
-	var _ = process.stderr.write;
+test.cb(t => {
+	t.plan(1);
 
-	process.getuid = function () {
-		return 0;
+	const _write = process.stderr.write;
+	const _exit = process.exit;
+
+	process.getuid = () => 0;
+
+	process.stderr.write = str => {
+		process.stderr.write = _write;
+		t.is(str.trim(), 'yo');
 	};
 
-	process.stderr.write = function (str) {
-		process.stderr.write = _;
-		t.assert(str.trim() === 'yo');
+	process.exit = () => {
+		process.exit = _exit;
 		t.end();
 	};
 
-	rootCheck('yo');
+	fn('yo');
 });
