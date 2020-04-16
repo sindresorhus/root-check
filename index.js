@@ -5,7 +5,7 @@ var sudoBlock = require('sudo-block');
 module.exports = function () {
 	try {
 		downgradeRoot();
-	} catch (err) {}
+	} catch (_) {}
 
 	sudoBlock.apply(null, arguments);
 };

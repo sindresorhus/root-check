@@ -1,7 +1,7 @@
 import test from 'ava';
-import fn from './';
+import rootCheck from '.';
 
-test.cb(t => {
+test.cb('main', t => {
 	t.plan(1);
 
 	const _write = process.stderr.write;
@@ -19,5 +19,5 @@ test.cb(t => {
 		t.end();
 	};
 
-	fn('yo');
+	rootCheck('yo');
 });
