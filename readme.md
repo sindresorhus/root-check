@@ -2,7 +2,7 @@
 
 > Try to [downgrade the permissions](https://github.com/sindresorhus/downgrade-root) of a process with root privileges and [block access](https://github.com/sindresorhus/sudo-block) if it fails
 
-![](https://github.com/sindresorhus/sudo-block/raw/master/screenshot.png)
+![](https://github.com/sindresorhus/sudo-block/raw/main/screenshot.png)
 
 ## Install
 
