@@ -1,11 +1,10 @@
-'use strict';
-var downgradeRoot = require('downgrade-root');
-var sudoBlock = require('sudo-block');
+import downgradeRoot from 'downgrade-root';
+import sudoBlock from 'sudo-block';
 
-module.exports = function () {
+export default function rootCheck(...arguments_) {
 	try {
 		downgradeRoot();
-	} catch (_) {}
+	} catch {}
 
-	sudoBlock.apply(null, arguments);
-};
+	sudoBlock(...arguments_);
+}

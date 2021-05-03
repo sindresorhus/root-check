@@ -13,7 +13,7 @@ $ npm install root-check
 ## Usage
 
 ```js
-const rootCheck = require('root-check');
+import rootCheck from 'root-check';
 
 rootCheck();
 ```

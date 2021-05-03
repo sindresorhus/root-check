@@ -1,5 +1,5 @@
 import test from 'ava';
-import rootCheck from '.';
+import rootCheck from './index.js';
 
 test.cb('main', t => {
 	t.plan(1);
@@ -9,9 +9,9 @@ test.cb('main', t => {
 
 	process.getuid = () => 0;
 
-	process.stderr.write = str => {
+	process.stderr.write = string => {
 		process.stderr.write = _write;
-		t.is(str.trim(), 'yo');
+		t.is(string.trim(), 'yo');
 	};
 
 	process.exit = () => {

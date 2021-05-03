@@ -1,43 +1,46 @@
 {
-  "name": "root-check",
-  "version": "1.0.0",
-  "description": "Try to downgrade the permissions of a process with root privileges and block access if it fails",
-  "license": "MIT",
-  "repository": "sindresorhus/root-check",
-  "funding": "https://github.com/sponsors/sindresorhus",
-  "author": {
-    "name": "Sindre Sorhus",
-    "email": "sindresorhus@gmail.com",
-    "url": "https://sindresorhus.com"
-  },
-  "engines": {
-    "node": ">=0.10.0"
-  },
-  "scripts": {
-    "test": "ava"
-  },
-  "files": [
-    "index.js"
-  ],
-  "keywords": [
-    "sudo",
-    "root",
-    "user",
-    "permissions",
-    "uid",
-    "block",
-    "prevent",
-    "stop",
-    "downgrade",
-    "drop",
-    "privileges",
-    "check"
-  ],
-  "dependencies": {
-    "downgrade-root": "^1.0.0",
-    "sudo-block": "^1.1.0"
-  },
-  "devDependencies": {
-    "ava": "^0.25.0"
-  }
+	"name": "root-check",
+	"version": "1.0.0",
+	"description": "Try to downgrade the permissions of a process with root privileges and block access if it fails",
+	"license": "MIT",
+	"repository": "sindresorhus/root-check",
+	"funding": "https://github.com/sponsors/sindresorhus",
+	"author": {
+		"name": "Sindre Sorhus",
+		"email": "sindresorhus@gmail.com",
+		"url": "https://sindresorhus.com"
+	},
+	"type": "module",
+	"exports": "./index.js",
+	"engines": {
+		"node": ">=12"
+	},
+	"scripts": {
+		"test": "xo && ava"
+	},
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"sudo",
+		"root",
+		"user",
+		"permissions",
+		"uid",
+		"block",
+		"prevent",
+		"stop",
+		"downgrade",
+		"drop",
+		"privileges",
+		"check"
+	],
+	"dependencies": {
+		"downgrade-root": "^2.0.0",
+		"sudo-block": "^4.0.0"
+	},
+	"devDependencies": {
+		"ava": "^3.15.0",
+		"xo": "^0.39.1"
+	}
 }
