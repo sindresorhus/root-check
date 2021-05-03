@@ -1,6 +1,6 @@
 {
 	"name": "root-check",
-	"version": "1.0.0",
+	"version": "2.0.0",
 	"description": "Try to downgrade the permissions of a process with root privileges and block access if it fails",
 	"license": "MIT",
 	"repository": "sindresorhus/root-check",
