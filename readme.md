@@ -6,8 +6,8 @@
 
 ## Install
 
-```
-$ npm install root-check
+```sh
+npm install root-check
 ```
 
 ## Usage
